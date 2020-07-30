@@ -1,0 +1,12 @@
+names(TData)[2] = "activity"
+names(TData)<-gsub("Acc", "Accelerometer", names(TData))
+names(TData)<-gsub("Gyro", "Gyroscope", names(TData))
+names(TData)<-gsub("BodyBody", "Body", names(TData))
+names(TData)<-gsub("Mag", "Magnitude", names(TData))
+names(TData)<-gsub("^t", "Time", names(TData))
+names(TData)<-gsub("^f", "Frequency", names(TData))
+names(TData)<-gsub("-mean()", "Mean", names(TData), ignore.case = TRUE)
+names(TData)<-gsub("-std()", "STD", names(TData), ignore.case = TRUE)
+names(TData)<-gsub("-freq()", "Frequency", names(TData), ignore.case = TRUE)
+names(TData)<-gsub("angle", "Angle", names(TData))
+names(TData)<-gsub("gravity", "Gravity", names(TData))
